@@ -1,0 +1,25 @@
+version: "1"
+services:
+  frontend:
+    image: juaquinremon/frontend
+    network_mode: "host" 
+  api-usuarios:
+    image: juaquinremon/api-usuarios
+    environment:
+      - POST_PASS=parcial1234
+    network_mode: "host"
+  api-autos:
+    image: virginiapuente/api-autos
+    environment:
+      - POST_PASS=parcial1234
+    network_mode: "host"
+  api-estacionamientos:
+    image: rominaromani/api-estacionamiento
+    environment:
+      - POST_PASS=parcial1234
+    network_mode: "host"
+  api-reservas:
+    image: virginiapuente/api-reservas
+    environment:
+      - POST_PASS=parcial1234
+    network_mode: "host"
